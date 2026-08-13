@@ -11,6 +11,10 @@
 <meta name="apple-mobile-web-app-title" content="التشخيص السني">
 <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://quizdental-c4d5a-default-rtdb.firebaseio.com" crossorigin>
+
+<!-- ===== أيقونة Favicon مباشرة في Head ===== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231e4a6e'/%3E%3Cstop offset='100%25' stop-color='%232c9b7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='96' fill='url(%23g)'/%3E%3Cpath fill='%23fff' d='M340 90c-40 0-60 20-84 20s-44-20-84-20c-50 0-90 42-90 94 0 52 20 120 44 168 18 36 34 70 58 70 22 0 28-26 48-70 12-26 22-44 32-44s20 18 32 44c20 44 26 70 48 70 24 0 40-34 58-70 24-48 44-116 44-168 0-52-40-94-90-94z'/%3E%3Cpath d='M240 180 L272 180 L272 212 L304 212 L304 244 L272 244 L272 276 L240 276 L240 244 L208 244 L208 212 L240 212 Z' fill='%232c9b7a' opacity='0.9'/%3E%3C/svg%3E">
+
 <style>
 /* ===== إصلاح الوميض: إضافة min-height للقوائم ===== */
 #usersList, #questionsList, #tickerItemsList { min-height: 60px; }
@@ -43,11 +47,11 @@
     font-weight: bold;
     margin-top: 20px;
 }
-.splash-subtitle {
-    color: rgba(255,255,255,0.8);
+.splash-subtitle {    color: rgba(255,255,255,0.8);
     font-size: 14px;
     margin-top: 8px;
-}.splash-loader {
+}
+.splash-loader {
     width: 180px;
     height: 3px;
     background: rgba(255,255,255,0.2);
@@ -92,11 +96,11 @@
     top: -50%; left: -50%;
     width: 200%; height: 200%;
     background: linear-gradient(45deg, transparent, rgba(255,255,255,0.15), transparent);
-    animation: installBannerShine 3s infinite;
-}
+    animation: installBannerShine 3s infinite;}
 .install-banner-v2 .install-icon { font-size: 28px; display: block; margin-bottom: 6px; }
 .install-banner-v2 .install-title { font-size: 15px; margin-bottom: 3px; }
-.install-banner-v2 .install-subtitle { font-size: 11px; opacity: 0.9; font-weight: normal; }@keyframes installBannerShine {
+.install-banner-v2 .install-subtitle { font-size: 11px; opacity: 0.9; font-weight: normal; }
+@keyframes installBannerShine {
     0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
     100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
@@ -141,11 +145,11 @@ body{background:linear-gradient(135deg,#e0f2fe,#f0f9ff);min-height:100vh;padding
 .option.wrong{background:#ff7675;color:#fff;border-color:#ff7675}
 .exp-box{background:#fef9e3;border-right:4px solid #f4b942;padding:15px;border-radius:12px;margin-top:15px;display:none}
 .pill{display:inline-block;background:#e6f4f0;color:#1e4a6e;padding:5px 15px;border-radius:20px;font-size:14px;font-weight:bold}
-.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px}
-.q-text{font-size:1.2rem;font-weight:bold;color:#1e4a6e;margin-bottom:20px;line-height:1.5}
+.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px}.q-text{font-size:1.2rem;font-weight:bold;color:#1e4a6e;margin-bottom:20px;line-height:1.5}
 .score-area{background:#2c9b7a;color:#fff;padding:5px 15px;border-radius:20px}
 .result-score{font-size:2rem;font-weight:bold;color:#2c9b7a}
-.wrong-item{background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:12px;margin:10px 0}.screen{display:none}
+.wrong-item{background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:12px;margin:10px 0}
+.screen{display:none}
 .screen.active{display:block}
 .q-item{background:#f8fafc;border-radius:16px;padding:15px;margin:10px 0;border-right:3px solid #2c9b7a}
 .user-item{background:#f8fafc;border-radius:16px;padding:15px;margin:10px 0;border-right:3px solid #6c5ce7}
@@ -190,11 +194,11 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
 .online-indicator.online{background:#00b894}
 .online-indicator.offline{background:#ff7675}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
-.sync-badge{background:#3b82f6;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;display:none;margin-right:5px}
-/* نافذة رفع JSON */
+.sync-badge{background:#3b82f6;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;display:none;margin-right:5px}/* نافذة رفع JSON */
 #jsonUploadModal textarea { height: 150px; font-family: monospace; }
 .json-upload-area { border: 2px dashed #ccc; padding: 20px; border-radius: 12px; text-align: center; margin: 10px 0; }
 .json-upload-area input[type="file"] { display: none; }
+
 /* ===== قسم الطلاب القابل للطي ===== */
 .collapsible-header {
     background: linear-gradient(135deg, #6c5ce7, #8b5cf6);
@@ -239,11 +243,11 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
 
 <!-- ===== Splash Screen ===== -->
 <div id="splashScreen" class="splash-screen">
-    <svg class="splash-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-        <defs>
+    <svg class="splash-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">        <defs>
             <linearGradient id="splashBg" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#1e4a6e"/>
-                <stop offset="100%" stop-color="#2c9b7a"/>            </linearGradient>
+                <stop offset="100%" stop-color="#2c9b7a"/>
+            </linearGradient>
             <filter id="splashGlow">
                 <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
                 <feMerge>
@@ -288,15 +292,15 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
         <div style="font-size:12px;margin-top:5px;opacity:0.9" id="offlineDetails"></div>
     </div>
     <!-- ===== Install Banner محسن ===== -->
-    <div id="installBanner" class="install-banner-v2" onclick="installApp()">
-        <span class="install-icon">📲</span>
+    <div id="installBanner" class="install-banner-v2" onclick="installApp()">        <span class="install-icon">📲</span>
         <div class="install-title">تثبيت التطبيق على الشاشة الرئيسية</div>
         <div class="install-subtitle">استخدم التطبيق بسرعة دون فتح المتصفح</div>
-    </div>    <div id="toastContainer" class="toast-container"></div>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
     <div id="landingScreen" class="screen active">
         <div class="card" style="text-align:center">
             <h2 style="color:#1e4a6e;margin-bottom:20px">مرحباً بك</h2>
-            <button class="btn" onclick="showLogin()">👨‍⚕️ دخول</button>
+            <button class="btn" onclick="showLogin()">👨‍️ دخول</button>
             <button class="btn" style="margin-top:10px" onclick="showRegister()">📝 تسجيل جديد</button>
             <button class="btn btn-admin" style="margin-top:10px" onclick="showAdminLogin()">🛡️ إدارة</button>
             <button class="btn-install-v2" id="installBtn" onclick="installApp()">
@@ -337,11 +341,11 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
             <button id="nextBtn" class="btn" style="display:none" onclick="nextQuestion()">التالي ➡️</button>
         </div>    </div>
     <div id="resultScreen" class="screen">
-        <div class="card" style="text-align:center">
-            <h2>📊 نتيجة الاختبار</h2>
+        <div class="card" style="text-align:center">            <h2>📊 نتيجة الاختبار</h2>
             <div class="result-score" id="finalScore">0</div>
             <p id="percentageText" style="margin:10px 0"></p>
-            <div id="wrongAnswersList"></div>            <button class="btn" onclick="startNewQuiz()">🔄 اختبار جديد</button>
+            <div id="wrongAnswersList"></div>
+            <button class="btn" onclick="startNewQuiz()">🔄 اختبار جديد</button>
         </div>
     </div>
     <div id="adminScreen" class="screen">
@@ -386,11 +390,11 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
         <div class="card" style="max-width:500px;margin:50px auto">
             <h3 id="modalTitle">إضافة سؤال</h3>
             <input type="text" id="qText" placeholder="نص السؤال">
-            <input type="text" id="opt1" placeholder="الخيار 1">
-            <input type="text" id="opt2" placeholder="الخيار 2">
+            <input type="text" id="opt1" placeholder="الخيار 1">            <input type="text" id="opt2" placeholder="الخيار 2">
             <input type="text" id="opt3" placeholder="الخيار 3">
             <input type="text" id="opt4" placeholder="الخيار 4">
-            <input type="text" id="correctOpt" placeholder="الخيار الصحيح (اكتب النص نفسه)">            <input type="text" id="questionImageUrl" placeholder="رابط صورة (اختياري)">
+            <input type="text" id="correctOpt" placeholder="الخيار الصحيح (اكتب النص نفسه)">
+            <input type="text" id="questionImageUrl" placeholder="رابط صورة (اختياري)">
             <textarea id="explanationText" rows="3" placeholder="الشرح العلمي"></textarea>
             <button class="btn" onclick="saveQuestion()"> حفظ</button>
             <button class="btn" style="background:#ccc;color:#333;margin-top:5px" onclick="closeModal()">إلغاء</button>
@@ -435,11 +439,11 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
 <div class="ticker-container">
     <div id="tickerText" class="ticker-text"></div>
 </div>
-
 <!-- ===== إخفاء Splash Screen بسرعة ===== -->
 <script>
 (function() {
-    var splashHidden = false;    function hideSplash() {
+    var splashHidden = false;
+    function hideSplash() {
         if (splashHidden) return;
         splashHidden = true;
         var splash = document.getElementById('splashScreen');
@@ -464,39 +468,50 @@ input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
 <script>
-// ========== Service Worker Registration ==========
+// ========== Service Worker Registration - محسن ==========
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         const swCode = `
-            const CACHE_NAME = 'dental-coach-v4';
-            const OFFLINE_URL = '/';
+            const CACHE_NAME = 'dental-coach-v6';
             
             self.addEventListener('install', (event) => {
+                console.log('SW installing...');
                 self.skipWaiting();
             });
             
             self.addEventListener('activate', (event) => {
+                console.log('SW activating...');
                 event.waitUntil(
                     caches.keys().then((names) => {
                         return Promise.all(
                             names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n))
                         );
-                    }).then(() => self.clients.claim())
+                    }).then(() => {
+                        console.log('SW activated and claiming clients');
+                        return self.clients.claim();                    })
                 );
             });
             
             self.addEventListener('fetch', (event) => {
                 const url = new URL(event.request.url);
                 
-                // Skip Firebase API calls                if (url.hostname.includes('firebaseio.com') || 
-                    url.hostname.includes('firebase') ||                    url.hostname.includes('googleapis.com')) {
+                // Skip Firebase API calls and cross-origin requests
+                if (url.hostname.includes('firebaseio.com') || 
+                    url.hostname.includes('firebase') || 
+                    url.hostname.includes('googleapis.com') ||
+                    url.hostname.includes('gstatic.com')) {
+                    return;
+                }
+                
+                // Only handle same-origin GET requests
+                if (event.request.method !== 'GET' || url.origin !== self.location.origin) {
                     return;
                 }
                 
                 event.respondWith(
                     caches.match(event.request).then((cached) => {
                         const fetchPromise = fetch(event.request).then((response) => {
-                            if (response && response.status === 200) {
+                            if (response && response.status === 200 && response.type === 'basic') {
                                 const clone = response.clone();
                                 caches.open(CACHE_NAME).then((cache) => {
                                     cache.put(event.request, clone);
@@ -504,7 +519,7 @@ if ('serviceWorker' in navigator) {
                             }
                             return response;
                         }).catch(() => {
-                            return cached;
+                            return cached || new Response('Offline', { status: 503 });
                         });
                         return cached || fetchPromise;
                     })
@@ -513,7 +528,14 @@ if ('serviceWorker' in navigator) {
         `;
         const blob = new Blob([swCode], { type: 'application/javascript' });
         const swUrl = URL.createObjectURL(blob);
-        navigator.serviceWorker.register(swUrl).catch(() => {});
+        
+        navigator.serviceWorker.register(swUrl, { scope: './' })
+            .then((registration) => {
+                console.log('✅ Service Worker registered successfully:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('❌ Service Worker registration failed:', error);
+            });
     });
 }
 // ========== Connection State Management ==========
@@ -537,7 +559,8 @@ function updateConnectionStatus() {
         const queueCount = pendingSyncQueue.length;
         statusEl.innerHTML = '🔴 غير متصل <span class="online-indicator offline"></span>';
         banner.style.display = 'block';        details.textContent = queueCount > 0 ? `${queueCount} عملية في انتظار المزامنة` : 'التطبيق يعمل بالبيانات المحلية';
-    }}
+    }
+}
 window.addEventListener('online', () => {
     updateConnectionStatus();
     showToast('🌐 عودة الاتصال', 'جاري مزامنة البيانات...', 'success');
@@ -563,8 +586,7 @@ function openLocalDB() {
             const db = event.target.result;
             if (!db.objectStoreNames.contains('questions')) {
                 db.createObjectStore('questions', { keyPath: 'id' });
-            }
-            if (!db.objectStoreNames.contains('meta')) {
+            }            if (!db.objectStoreNames.contains('meta')) {
                 db.createObjectStore('meta', { keyPath: 'key' });
             }
             if (!db.objectStoreNames.contains('users')) {
@@ -586,7 +608,8 @@ function idbPut(storeName, data) {    return new Promise((resolve, reject) => {
             const store = tx.objectStore(storeName);
             if (Array.isArray(data)) {
                 data.forEach(d => store.put(d));
-            } else {                store.put(data);
+            } else {
+                store.put(data);
             }
             tx.oncomplete = () => resolve();
             tx.onerror = () => reject(tx.error);
@@ -612,8 +635,7 @@ function idbClear(storeName) {
             const tx = localDB.transaction([storeName], 'readwrite');
             tx.objectStore(storeName).clear();
             tx.oncomplete = () => resolve();
-            tx.onerror = () => reject(tx.error);
-        } catch(e) { reject(e); }
+            tx.onerror = () => reject(tx.error);        } catch(e) { reject(e); }
     });
 }
 function idbDelete(storeName, key) {
@@ -635,7 +657,8 @@ function idbGet(storeName, key) {
             request.onsuccess = () => resolve(request.result);
             request.onerror = () => reject(request.error);
         } catch(e) { reject(e); }
-    });}
+    });
+}
 async function saveQuestionsToCache(questionsArray) {
     try {
         await idbClear('questions');
@@ -661,8 +684,7 @@ async function saveUsersToCache(usersArray) {
 async function loadUsersFromCache() {
     try {
         return await idbGetAll('users');
-    } catch(e) { return []; }
-}
+    } catch(e) { return []; }}
 async function saveTickerToCache(items) {
     try {
         await idbClear('ticker');
@@ -684,7 +706,8 @@ async function addToSyncQueue(operation) {
     try {
         await idbPut('syncQueue', item);
     } catch(e) { console.warn(e); }
-    updateSyncQueueUI();    return item;
+    updateSyncQueueUI();
+    return item;
 }
 async function loadSyncQueueFromCache() {
     try {
@@ -710,8 +733,7 @@ function updateSyncQueueUI() {
     if (offlineDetails && !isOnline && pendingSyncQueue.length > 0) {
         offlineDetails.textContent = `${pendingSyncQueue.length} عملية في انتظار المزامنة`;
     }}
-async function processSyncQueue() {
-    if (!isOnline || !db || pendingSyncQueue.length === 0) return;
+async function processSyncQueue() {    if (!isOnline || !db || pendingSyncQueue.length === 0) return;
     
     const syncBadge = document.getElementById('syncBadge');
     if (syncBadge) syncBadge.style.display = 'inline-block';
@@ -733,7 +755,8 @@ async function processSyncQueue() {
     if (successCount > 0) {
         await clearSyncQueue();
         showToast('✅ تمت المزامنة', `تمت مزامنة ${successCount} عملية بنجاح`, 'success');
-    }    
+    }
+    
     if (syncBadge) syncBadge.style.display = 'none';
 }
 async function executeSyncOperation(op) {
@@ -759,8 +782,7 @@ async function executeSyncOperation(op) {
         case 'setTicker':
             await db.ref('ticker/' + op.id).set(op.data);
             break;
-        case 'updateTicker':
-            await db.ref('ticker/' + op.id).update(op.data);
+        case 'updateTicker':            await db.ref('ticker/' + op.id).update(op.data);
             break;
         case 'removeTicker':
             await db.ref('ticker/' + op.id).remove();
@@ -770,143 +792,218 @@ async function executeSyncOperation(op) {
             break;
     }
 }
-// ========== PWA SETUP ==========
-const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <defs>
-        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#1e4a6e"/>
-            <stop offset="50%" stop-color="#1e5f7e"/>
-            <stop offset="100%" stop-color="#2c9b7a"/>
-        </linearGradient>
-        <linearGradient id="toothGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ffffff"/>
-            <stop offset="100%" stop-color="#e0f7fa"/>
-        </linearGradient>
-        <filter id="glow">            <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
-            <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
-        <filter id="shadow">
-            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25"/>
-        </filter>
-        <radialGradient id="circleGrad" cx="50%" cy="45%" r="50%">
-            <stop offset="0%" stop-color="#2c9b7a" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#1e4a6e" stop-opacity="0"/>
-        </radialGradient>
-    </defs>
-    <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
-    <circle cx="256" cy="210" r="150" fill="url(#circleGrad)"/>
-    <g filter="url(#shadow)">
-        <path fill="url(#toothGrad)" d="M340 90c-40 0-60 20-84 20s-44-20-84-20c-50 0-90 42-90 94 0 52 20 120 44 168 18 36 34 70 58 70 22 0 28-26 48-70 12-26 22-44 32-44s20 18 32 44c20 44 26 70 48 70 24 0 40-34 58-70 24-48 44-116 44-168 0-52-40-94-90-94z"/>
-        <path d="M240 175 L272 175 L272 207 L304 207 L304 239 L272 239 L272 271 L240 271 L240 239 L208 239 L208 207 L240 207 Z" fill="#2c9b7a" opacity="0.9" filter="url(#glow)"/>
-    </g>
-    <text x="256" y="455" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#fff" opacity="0.95">د. ز. عطوني</text>
-</svg>`;
-let appIconUrl = null;
-async function svgToPng(svg, size) {
-    return new Promise((resolve) => {
-        const img = new Image();
-        const blob = new Blob([svg], {type: 'image/svg+xml'});
-        const url = URL.createObjectURL(blob);
-        img.onload = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = size; canvas.height = size;
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(img, 0, 0, size, size);
-            canvas.toBlob((b) => {
-                const objUrl = URL.createObjectURL(b);
-                resolve({url: objUrl, size});
-                if (size === 192) appIconUrl = objUrl;
-                URL.revokeObjectURL(url);
-            }, 'image/png');
-        };
-        img.onerror = () => { URL.revokeObjectURL(url); resolve({url: '', size}); };
-        img.src = url;
-    });
+
+// ========== PWA SETUP - محسن ليعمل على كروم ==========
+// نستخدم Data URL بدلاً من Blob URL للأيقونات
+const ICON_SVG_DATA = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e4a6e"/><stop offset="50%" stop-color="#1e5f7e"/><stop offset="100%" stop-color="#2c9b7a"/></linearGradient><linearGradient id="toothGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e0f7fa"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25"/></filter><radialGradient id="circleGrad" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#2c9b7a" stop-opacity="0.3"/><stop offset="100%" stop-color="#1e4a6e" stop-opacity="0"/></radialGradient></defs><rect width="512" height="512" rx="96" fill="url(#bgGrad)"/><circle cx="256" cy="210" r="150" fill="url(#circleGrad)"/><g filter="url(#shadow)"><path fill="url(#toothGrad)" d="M340 90c-40 0-60 20-84 20s-44-20-84-20c-50 0-90 42-90 94 0 52 20 120 44 168 18 36 34 70 58 70 22 0 28-26 48-70 12-26 22-44 32-44s20 18 32 44c20 44 26 70 48 70 24 0 40-34 58-70 24-48 44-116 44-168 0-52-40-94-90-94z"/><path d="M240 175 L272 175 L272 207 L304 207 L304 239 L272 239 L272 271 L240 271 L240 239 L208 239 L208 207 L240 207 Z" fill="#2c9b7a" opacity="0.9" filter="url(#glow)"/></g><text x="256" y="455" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#fff" opacity="0.95">د. ز. عطوني</text></svg>`)}`;
+
+let appIconUrl = ICON_SVG_DATA;
+
+// إنشاء manifest مع Data URLs
+function setupManifest() {
+    const manifest = {
+        id: "/dental-coach-app-v6",
+        name: "مدرب التشخيص السني - د. زكريا عطوني",
+        short_name: "التشخيص السني",
+        description: "تطبيق تدريبي للتشخيص السني - إعداد د. زكريا عطوني",
+        start_url: "./",
+        scope: "./",
+        display: "standalone",
+        orientation: "portrait",
+        background_color: "#1e4a6e",
+        theme_color: "#1e4a6e",
+        lang: "ar",
+        dir: "rtl",
+        categories: ["education", "medical", "health"],
+        icons: [
+            { 
+                src: ICON_SVG_DATA, 
+                sizes: "any", 
+                type: "image/svg+xml",
+                purpose: "any maskable"
+            }
+        ],
+        shortcuts: [
+            {
+                name: "بدء اختبار جديد",
+                short_name: "اختبار",
+                description: "ابدأ اختباراً جديداً الآن",
+                url: "./?action=start_quiz",
+                icons: [{ src: ICON_SVG_DATA, sizes: "any", type: "image/svg+xml" }]
+            }
+        ]    };
+    
+    const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
+    const manifestUrl = URL.createObjectURL(blob);
+    
+    let link = document.querySelector('link[rel="manifest"]');
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'manifest';
+        document.head.appendChild(link);
+    }
+    link.href = manifestUrl;
+    
+    // apple-touch-icon لـ iOS
+    let appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+    if (!appleIcon) {
+        appleIcon = document.createElement('link');
+        appleIcon.rel = 'apple-touch-icon';
+        document.head.appendChild(appleIcon);
+    }
+    appleIcon.href = ICON_SVG_DATA;
+    
+    console.log('✅ Manifest setup complete with SVG icon');
 }
-async function setupManifest() {
-    try {
-        const icon192 = await svgToPng(ICON_SVG, 192);
-        const icon512 = await svgToPng(ICON_SVG, 512);
-        
-        const manifest = {            id: "/dental-coach-app-v4",
-            name: "مدرب التشخيص السني - د. زكريا عطوني",
-            short_name: "التشخيص السني",
-            description: "تطبيق تدريبي للتشخيص السني",
-            start_url: ".",
-            scope: ".",
-            display: "standalone",
-            orientation: "portrait",
-            background_color: "#1e4a6e",
-            theme_color: "#1e4a6e",
-            lang: "ar",
-            dir: "rtl",
-            categories: ["education", "medical", "health"],
-            icons: [
-                { src: icon192.url, sizes: "192x192", type: "image/png", purpose: "any" },
-                { src: icon512.url, sizes: "512x512", type: "image/png", purpose: "any" },
-                { src: icon192.url, sizes: "192x192", type: "image/png", purpose: "maskable" },
-                { src: icon512.url, sizes: "512x512", type: "image/png", purpose: "maskable" }
-            ],
-            shortcuts: [
-                {
-                    name: "بدء اختبار جديد",
-                    short_name: "اختبار",
-                    description: "ابدأ اختباراً جديداً الآن",
-                    url: "./?action=start_quiz",
-                    icons: [{ src: icon192.url, sizes: "192x192" }]
-                }
-            ]
-        };
-        
-        const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
-        const manifestUrl = URL.createObjectURL(blob);
-        let link = document.querySelector('link[rel="manifest"]');
-        if (!link) {
-            link = document.createElement('link');
-            link.rel = 'manifest';
-            document.head.appendChild(link);
-        }
-        link.href = manifestUrl;
-        
-        // apple-touch-icon لـ iOS
-        let appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
-        if (!appleIcon) {
-            appleIcon = document.createElement('link');
-            appleIcon.rel = 'apple-touch-icon';
-            document.head.appendChild(appleIcon);
-        }
-        appleIcon.href = icon192.url;
-    } catch(e) {
-        console.warn('Manifest setup error:', e);    }
-}
+
 setupManifest();
+
+// ========== beforeinstallprompt Handler - محسن ==========
 let deferredPrompt = null;
+let installButtonShown = false;
+
+// الاستماع لحدث beforeinstallprompt
 window.addEventListener('beforeinstallprompt', (e) => {
+    console.log('✅ beforeinstallprompt fired!');
     e.preventDefault();
     deferredPrompt = e;
+    
+    showInstallButtons();
+    
+    // إظهار toast للمستخدم
+    setTimeout(() => {
+        showToast('📲 تطبيق قابل للتثبيت', 'اضغط على زر التثبيت لإضافته للشاشة الرئيسية', 'success');
+    }, 2000);
+});
+
+// التحقق مما إذا كان التطبيق مثبتاً بالفعل
+window.addEventListener('appinstalled', (e) => {
+    console.log('✅ App installed successfully!');
+    showToast('🎉 تم التثبيت بنجاح!', 'يمكنك الآن فتح التطبيق من الشاشة الرئيسية', 'success');
+    deferredPrompt = null;    hideInstallButtons();
+});
+
+// دالة لإظهار أزرار التثبيت
+function showInstallButtons() {
     const btn = document.getElementById('installBtn');
     const banner = document.getElementById('installBanner');
-    if (btn) btn.style.display = 'block';
-    if (banner) banner.style.display = 'block';
-});
-function installApp() {
-    if (!deferredPrompt) {
-        alert('للتثبيت: اضغط على ⋮ في أعلى المتصفح ثم "إضافة إلى الشاشة الرئيسية"');
-        return;
+    
+    if (btn && !installButtonShown) {
+        btn.style.display = 'block';
+        installButtonShown = true;
+        console.log('✅ Install button shown');
     }
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((r) => {
-        if (r.outcome === 'accepted') {
-            showToast('✅ تم التثبيت بنجاح!', 'يمكنك الآن فتح التطبيق من الشاشة الرئيسية', 'success');
-        }
-        deferredPrompt = null;
-        document.getElementById('installBtn').style.display = 'none';
-        document.getElementById('installBanner').style.display = 'none';
-    });
+    if (banner) {
+        banner.style.display = 'block';
+        console.log('✅ Install banner shown');
+    }
 }
+
+// دالة لإخفاء أزرار التثبيت
+function hideInstallButtons() {
+    const btn = document.getElementById('installBtn');
+    const banner = document.getElementById('installBanner');
+    if (btn) btn.style.display = 'none';
+    if (banner) banner.style.display = 'none';
+}
+
+// التحقق الدوري من توفر التثبيت (كل 3 ثوانٍ لمدة 30 ثانية)
+let installCheckInterval = null;
+let installCheckCount = 0;
+
+function startInstallCheck() {
+    if (installCheckInterval) return;
+    
+    installCheckInterval = setInterval(() => {
+        installCheckCount++;
+        console.log(`🔍 Checking for install prompt... (${installCheckCount}/10)`);
+        
+        // إذا لم يظهر afterinstallprompt بعد 30 ثانية، أظهر الزر anyway
+        if (installCheckCount >= 10 && !installButtonShown) {
+            console.log('⏰ Timeout reached, showing install button anyway');
+            showInstallButtons();
+            clearInterval(installCheckInterval);
+            installCheckInterval = null;
+        }
+        
+        // إذا ظهر deferredPrompt، أوقف التحقق
+        if (deferredPrompt) {
+            clearInterval(installCheckInterval);
+            installCheckInterval = null;        }
+    }, 3000);
+}
+
+// بدء التحقق بعد تحميل الصفحة
+window.addEventListener('load', () => {
+    setTimeout(startInstallCheck, 2000);
+});
+
+// دالة التثبيت الرئيسية - تعمل دائماً
+function installApp() {
+    console.log(' installApp() called');
+    console.log('deferredPrompt:', deferredPrompt);
+    
+    if (deferredPrompt) {
+        // إذا كان deferredPrompt متاحاً، استخدمه
+        console.log('🚀 Showing native install prompt...');
+        deferredPrompt.prompt();
+        
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('✅ User accepted the install prompt');
+                showToast('✅ جاري التثبيت...', 'سيظهر التطبيق على شاشتك الرئيسية', 'success');
+            } else {
+                console.log('❌ User dismissed the install prompt');
+                showToast('ℹ️ تم إلغاء التثبيت', 'يمكنك التثبيت لاحقاً من قائمة المتصفح', 'info');
+            }
+            deferredPrompt = null;
+            hideInstallButtons();
+        });
+    } else {
+        // إذا لم يكن deferredPrompt متاحاً، أظهر تعليمات يدوية
+        console.log('⚠️ deferredPrompt not available, showing manual instructions');
+        showManualInstallInstructions();
+    }
+}
+
+// دالة لعرض تعليمات التثبيت اليدوية
+function showManualInstallInstructions() {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isAndroid = /Android/.test(navigator.userAgent);
+    const isChrome = /Chrome/.test(navigator.userAgent) && !/Edge/.test(navigator.userAgent);
+    const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    
+    let message = '📲 لتثبيت التطبيق:\n\n';
+    
+    if (isIOS) {
+        message += '🍎 على iPhone/iPad:\n';
+        message += '1. اضغط على زر المشاركة ⬆️ في أسفل الشاشة\n';
+        message += '2. مرر للأسفل واختر "إضافة إلى الشاشة الرئيسية"\n';        message += '3. اضغط "إضافة" في الأعلى';
+    } else if (isAndroid && isChrome) {
+        message += '🤖 على Android Chrome:\n';
+        message += '1. اضغط على ⋮ (ثلاث نقاط) في أعلى اليمين\n';
+        message += '2. اختر "تثبيت التطبيق" أو "إضافة إلى الشاشة الرئيسية"\n';
+        message += '3. أكد التثبيت';
+    } else if (isChrome) {
+        message += '🌐 على Chrome Desktop:\n';
+        message += '1. ابحث عن أيقونة التثبيت ⊕ في شريط العنوان\n';
+        message += '2. أو اضغط على ⋮ → "تثبيت التطبيق"\n';
+        message += '3. أكد التثبيت';
+    } else if (isSafari) {
+        message += '🧭 على Safari:\n';
+        message += '1. اضغط على زر المشاركة ⬆️\n';
+        message += '2. اختر "إضافة إلى الشاشة الرئيسية"\n';
+        message += '3. اضغط "إضافة"';
+    } else {
+        message += '📱 على متصفحك:\n';
+        message += '1. افتح قائمة المتصفح (⋮ أو ☰)\n';
+        message += '2. ابحث عن "تثبيت" أو "إضافة إلى الشاشة الرئيسية"\n';
+        message += '3. أكد التثبيت';
+    }
+    
+    alert(message);
+}
+
 // ========== Firebase Setup ==========
 const firebaseConfig = {
     apiKey: "AIzaSyDUgwNmS9l_gTJEUFfvRimTR8gDpX5QTdA",
@@ -929,8 +1026,8 @@ function safeDbRef(path) {
     return db.ref(path);
 }
 async function safeDbOnce(path) {
-    if (!db) return null;    try {
-        return await db.ref(path).once('value');
+    if (!db) return null;
+    try {        return await db.ref(path).once('value');
     } catch(e) {
         return null;
     }
@@ -978,8 +1075,8 @@ try {
         if (connected && !isOnline) {
             // Firebase says connected but browser doesn't - trust browser
         }
-        if (connected && isOnline) {            processSyncQueue();
-        }
+        if (connected && isOnline) {
+            processSyncQueue();        }
     });
 } catch(e) {
     console.error("Firebase error:", e);
@@ -1027,8 +1124,8 @@ function sendPushNotification(title, body, userName = null) {
             if (currentUser && currentUser.isAdmin) {
                 showScreen('adminScreen');
                 setTimeout(() => showRequestsModal(), 300);
-            }        };
-        setTimeout(() => {
+            }
+        };        setTimeout(() => {
             try { notif.close(); } catch(e) {}
         }, 15000);
     } catch(e) {
@@ -1076,8 +1173,8 @@ function showToast(title, message, type = 'info') {    const container = documen
     if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
     setTimeout(() => {
         if (toast.parentElement) {
-            toast.classList.add('hiding');            setTimeout(() => toast.remove(), 300);
-        }
+            toast.classList.add('hiding');
+            setTimeout(() => toast.remove(), 300);        }
     }, 8000);
 }
 async function checkPendingUsers() {
@@ -1125,8 +1222,8 @@ async function checkPendingUsers() {
             if (pendingCount > lastPendingCount && lastPendingCount >= 0) {
                 const newCount = pendingCount - lastPendingCount;
                 const newUsers = pendingUsers.slice(-newCount);
-                showToast('🆕 طلبات جديدة!', `${newCount} طلب اشتراك جديد`);                playBeep();                    newUsers.forEach(u => {
-                        sendPushNotification(
+                showToast('🆕 طلبات جديدة!', `${newCount} طلب اشتراك جديد`);
+                playBeep();                    newUsers.forEach(u => {                        sendPushNotification(
                             ' طلب اشتراك جديد!',
                             ` ${u.name} أرسل طلب تسجيل جديد`,
                             u.name
@@ -1174,8 +1271,8 @@ async function showRequestsModal() {
             cached.forEach(u => { users[u.key] = u; });
         }
     } else {
-        const cached = await loadUsersFromCache();        cached.forEach(u => { users[u.key] = u; });
-    }
+        const cached = await loadUsersFromCache();
+        cached.forEach(u => { users[u.key] = u; });    }
     
     const pendingUsers = [];
     Object.entries(users).forEach(([key, user]) => {
@@ -1223,8 +1320,8 @@ async function quickApprove(key, name) {
         await saveUsersToCache(updated);
         
         showToast('✅ تم التفعيل', `تم تفعيل حساب ${name}`, 'success');
-        showRequestsModal();        loadUsers();
-        checkPendingUsers();
+        showRequestsModal();
+        loadUsers();        checkPendingUsers();
     } catch(e) {
         showToast('❌ خطأ', e.message);
     }
@@ -1272,8 +1369,8 @@ async function initTicker() {
             saveTickerToCache(tickerItems).catch(() => {});
             updateTickerDisplay();
             updateTickerStatus();
-            if (currentUser && currentUser.isAdmin) {                renderTickerAdminList();
-            }
+            if (currentUser && currentUser.isAdmin) {
+                renderTickerAdminList();            }
         });
     } catch(e) {
         console.warn('Ticker listener error:', e);
@@ -1321,8 +1418,8 @@ function renderTickerAdminList() {
             <div class="text">${item.text}</div>
             <div><span class="status-badge ${statusClass}">${statusText}</span></div>
             <div class="actions">
-                <button class="btn" style="background:#ffb703;width:auto;padding:4px 12px" onclick="toggleTickerItem('${item.id}')">🔄 تبديل</button>                <button class="btn" style="background:#e17055;width:auto;padding:4px 12px" onclick="deleteTickerItem('${item.id}')">🗑️</button>
-            </div>
+                <button class="btn" style="background:#ffb703;width:auto;padding:4px 12px" onclick="toggleTickerItem('${item.id}')">🔄 تبديل</button>
+                <button class="btn" style="background:#e17055;width:auto;padding:4px 12px" onclick="deleteTickerItem('${item.id}')">🗑️</button>            </div>
         `;
         fragment.appendChild(div);
     });    container.innerHTML = '';
@@ -1370,8 +1467,8 @@ async function toggleTickerItem(id) {
         } else {
             await addToSyncQueue({ type: 'updateTicker', id: id, data: { active: newStatus } });
             item.active = newStatus;
-            renderTickerAdminList();        }
-        showToast('✅ تم التحديث', `النص ${newStatus ? 'نشط' : 'غير نشط'}`, 'success');    } catch(e) {
+            renderTickerAdminList();
+        }        showToast('✅ تم التحديث', `النص ${newStatus ? 'نشط' : 'غير نشط'}`, 'success');    } catch(e) {
         showToast('❌ خطأ', e.message);
     }
 }
@@ -1419,8 +1516,8 @@ async function startNewQuiz() {
                 // لا يوجد كاش - تحميل من Firebase
         if (!db || !isOnline) {
             alert('لا توجد أسئلة محفوظة محلياً ولا يوجد اتصال بالإنترنت. الرجاء الاتصال بالإنترنت لتحميل الأسئلة لأول مرة.');
-            return;        }
-        
+            return;
+        }        
         const snapshot = await db.ref('questions').once('value');
         const questions = snapshot.val();
         
@@ -1468,8 +1565,8 @@ function syncQuestionsInBackground() {
         if (freshQuestions.length !== currentQuestions.length) {
             saveQuestionsToCache(freshQuestions).then(() => {
                 showToast('🔄 تحديث', 'تم تحديث الأسئلة', 'success');
-            }).catch(() => {});        } else {
-            // تحديث الكاش بصمت
+            }).catch(() => {});
+        } else {            // تحديث الكاش بصمت
             saveQuestionsToCache(freshQuestions).catch(() => {});
         }
     }).catch(() => {});
@@ -1517,8 +1614,8 @@ async function checkAnswer(selected, correct, explanation, element) {
         currentScore += 10;
         document.getElementById('scoreDisplay').innerHTML = `⭐ ${currentScore} نقطة`;
         if (currentUser && !currentUser.isAdmin) {
-            try {                if (isOnline && db) {
-                    db.ref('users/' + currentUser.key + '/totalPoints').transaction(p => (p || 0) + 10);
+            try {
+                if (isOnline && db) {                    db.ref('users/' + currentUser.key + '/totalPoints').transaction(p => (p || 0) + 10);
                 } else {
                     // Queue points update
                     await addToSyncQueue({ 
@@ -1566,8 +1663,8 @@ async function loadQuestions() {
     // تعيين نص مؤقت مع الحفاظ على الحد الأدنى للارتفاع لتجنب الوميض
     container.innerHTML = '<p style="text-align:center;color:#888;">⏳ جاري التحميل...</p>';
     
-    let questions = {};    
-    if (isOnline && db) {
+    let questions = {};
+        if (isOnline && db) {
         try {
             const snapshot = await db.ref('questions').once('value');
             questions = snapshot.val() || {};
@@ -1615,8 +1712,8 @@ function addQuestionForm() {
 }
 function editQuestion(id, q) {
     editingQuestionId = id;
-    document.getElementById('modalTitle').innerHTML = '✏️ تعديل السؤال';    document.getElementById('qText').value = q.q;
-    document.getElementById('opt1').value = q.o[0] || '';
+    document.getElementById('modalTitle').innerHTML = '✏️ تعديل السؤال';
+    document.getElementById('qText').value = q.q;    document.getElementById('opt1').value = q.o[0] || '';
     document.getElementById('opt2').value = q.o[1] || '';
     document.getElementById('opt3').value = q.o[2] || '';
     document.getElementById('opt4').value = q.o[3] || '';
@@ -1664,8 +1761,8 @@ async function saveQuestion() {
                 cached.push({ id: newId, ...questionData });
                 await saveQuestionsToCache(cached);
             }
-                        alert('💾 تم الحفظ محلياً - سيتم المزامنة عند عودة الاتصال');
-        }
+            
+            alert('💾 تم الحفظ محلياً - سيتم المزامنة عند عودة الاتصال');        }
         closeModal();
         loadQuestions();
     } catch(e) {
@@ -1713,8 +1810,8 @@ async function deleteQuestion(id) {
 }
 // ===== دالة طي/فتح قسم الطلاب =====
 let usersCollapseOpen = false;
-function toggleUsersCollapse() {    usersCollapseOpen = !usersCollapseOpen;
-    const body = document.getElementById('usersCollapsible');
+function toggleUsersCollapse() {
+    usersCollapseOpen = !usersCollapseOpen;    const body = document.getElementById('usersCollapsible');
     const arrow = document.getElementById('usersArrow');
     if (usersCollapseOpen) {
         body.classList.add('open');
@@ -1762,8 +1859,8 @@ async function loadUsers() {
         let statusClass = '', statusText = '';
         if (user.status === 'active') { statusClass = 'tag-active'; statusText = 'نشط'; }
         else if (user.status === 'pending') { statusClass = 'tag-pending'; statusText = 'قيد المراجعة'; }
-        else { statusClass = 'tag-suspended'; statusText = 'موقوف'; }        const div = document.createElement('div');        div.className = 'user-item';
-        div.innerHTML = `
+        else { statusClass = 'tag-suspended'; statusText = 'موقوف'; }
+        const div = document.createElement('div');        div.className = 'user-item';        div.innerHTML = `
             <div><strong>${user.name}</strong> <span class="tag ${statusClass}">${statusText}</span></div>                <div style="font-size:13px;color:#666">🏆 النقاط: ${user.totalPoints || 0}</div>
             <div style="font-size:12px;color:#888">🔑 ${user.password}</div>
             <div class="row" style="margin-top:10px">
@@ -1811,8 +1908,8 @@ async function deleteUser(key, name) {
             await db.ref('users/' + key).remove();
             alert('تم حذف الطالب');        } else {
             await addToSyncQueue({ type: 'removeUser', key: 'users/' + key });
-            alert('💾 تم الحذف محلياً - سيتم المزامنة عند عودة الاتصال');        }
-        
+            alert('💾 تم الحذف محلياً - سيتم المزامنة عند عودة الاتصال');
+        }        
         const cached = await loadUsersFromCache();
         const updated = cached.filter(u => u.key !== key);
         await saveUsersToCache(updated);
@@ -1860,8 +1957,8 @@ function handleJsonFileUpload(event) {
     const reader = new FileReader();
     reader.onload = (e) => {
         document.getElementById('jsonTextInput').value = e.target.result;
-    };    reader.readAsText(file);
-}
+    };
+    reader.readAsText(file);}
 
 async function processJsonUpload() {
     const statusDiv = document.getElementById('jsonUploadStatus');
@@ -1909,8 +2006,8 @@ async function processJsonUpload() {
         // توقع الحقول: q, o (array), c, e (اختياري), img (اختياري)
         if (!q.q || !q.o || !Array.isArray(q.o) || q.o.length < 2 || !q.c) {
             errors.push(`السؤال رقم ${i+1} غير مكتمل (يحتاج: q, o[], c)`);
-            errorCount++;            continue;
-        }
+            errorCount++;
+            continue;        }
         if (!q.e) q.e = "لا يوجد شرح";
         if (!q.img) q.img = "";
         validCount++;
@@ -1958,8 +2055,8 @@ async function processJsonUpload() {
                 const cached = await loadQuestionsFromCache();
                 cached.push({ id: tempId, ...questionData });
                 await saveQuestionsToCache(cached);
-                saved++;            } catch(e2) {
-                failed++;
+                saved++;
+            } catch(e2) {                failed++;
             }
         }
     }
@@ -2007,8 +2104,8 @@ window.onload = async () => {
                 loadUsers();
             }
             startNotificationSystem();
-        } else {            showScreen('studentScreen');
-            startNewQuiz();
+        } else {
+            showScreen('studentScreen');            startNewQuiz();
         }
     } else {
         showLanding();
@@ -2056,8 +2153,8 @@ async function doLogin() {
             // Cache user
             if (user) {
                 await idbPut('users', { key: userKey, ...user });
-            }        } else {
-            // Try local cache
+            }
+        } else {            // Try local cache
             user = await idbGet('users', userKey);
         }
         
@@ -2105,8 +2202,8 @@ async function doRegister() {
     try {
         if (isOnline && db) {
             await db.ref('users/' + userKey).set(userData);
-            alert('✅ تم إرسال طلب التسجيل بنجاح، سيتم تفعيل حسابك قريباً');        } else {
-            await addToSyncQueue({ type: 'setUser', key: 'users/' + userKey, data: userData });
+            alert('✅ تم إرسال طلب التسجيل بنجاح، سيتم تفعيل حسابك قريباً');
+        } else {            await addToSyncQueue({ type: 'setUser', key: 'users/' + userKey, data: userData });
             // Save to local cache
             await idbPut('users', { key: userKey, ...userData });
             alert('💾 تم حفظ طلب التسجيل محلياً - سيتم إرساله عند عودة الاتصال');
